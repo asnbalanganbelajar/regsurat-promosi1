@@ -29,16 +29,16 @@
         @media (max-width: 768px) {
             .hero-section { padding: 50px 0; }
             .price-tag { font-size: 2.5rem; }
-            
-            /* Menyusutkan bingkai iMac agar layar aplikasi lebih lega di HP */
             .imac-monitor { padding: 12px 12px 35px 12px; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
             .imac-screen-inner { padding: 5px; border-radius: 6px; }
-            
-            /* Menyesuaikan ukuran tiang dan kaki penyangga di HP */
             .imac-stand-container { margin-top: -15px; }
             .imac-stand-neck { width: 100px; height: 40px; }
             .imac-stand-base { width: 150px; height: 8px; border-radius: 2px 2px 6px 6px; }
         }
+        
+        /* Modifikasi untuk Accordion FAQ */
+        .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: #0d6efd; font-weight: bold; }
+        .accordion-button:focus { box-shadow: none; border-color: rgba(0,0,0,.125); }
     </style>
 </head>
 <body>
@@ -59,21 +59,21 @@
         </div>
     </header>
 
-    <section id="fitur" class="py-5 bg-light">
+	<section id="fitur" class="py-5 bg-light">
         <div class="container">
             <div class="row text-center g-4">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm p-4">
                         <i class="fas fa-bolt feature-icon"></i>
                         <h4 class="fw-bold">Langsung Pakai</h4>
-                        <p class="text-muted">Bukan *source code* mentah. Tidak perlu instal database, XAMPP, atau pengaturan IT yang rumit. Cukup buka tautan di browser.</p>
+                        <p class="text-muted">Bukan <i>source code</i> mentah. Tidak perlu instal database, XAMPP, atau pengaturan IT yang rumit. Cukup buka tautan di browser.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm p-4">
                         <i class="fas fa-eye feature-icon"></i>
                         <h4 class="fw-bold">Pratinjau Cepat</h4>
-                        <p class="text-muted">Cari arsip surat bertahun-tahun lalu dalam hitungan detik. Baca dokumen langsung di layar tanpa perlu *download* file.</p>
+                        <p class="text-muted">Cari arsip surat bertahun-tahun lalu dalam hitungan detik. Baca dokumen langsung di layar tanpa perlu <i>download</i> file.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -149,13 +149,117 @@
                         <h4 class="fw-bold text-uppercase text-primary mb-3">Harga Promo Spesial</h4>
                         <h2 class="price-tag mb-3">Rp 250.000</h2>
                         <div class="bg-light p-3 rounded mb-4 text-start">
-                            <p class="text-dark mb-2 fw-bold"><i class="fas fa-check-circle text-success me-2"></i>Sekali Bayar (Bersih)</p>
-                            <p class="text-dark mb-2 fw-bold"><i class="fas fa-check-circle text-success me-2"></i>Tanpa Biaya Perpanjangan Tahunan</p>
-                            <p class="text-dark mb-0 fw-bold"><i class="fas fa-check-circle text-success me-2"></i>Tanpa Biaya Cloud (Ruang Penyimpanan)</p>
+                            <p class="text-dark mb-2 fw-bold"><i class="fas fa-check-circle text-success me-2"></i>Sekali bayar (bersih) untuk lifetime!</p>
+                            <p class="text-dark mb-2 fw-bold"><i class="fas fa-check-circle text-success me-2"></i>Perpanjangan (tahunan) gratis!</p>
+                            <p class="text-dark mb-0 fw-bold"><i class="fas fa-check-circle text-success me-2"></i>Ruang penyimpanan (cloud) gratis!</p>
                         </div>
                         <button type="button" class="btn btn-primary btn-lg fw-bold w-100" data-bs-toggle="modal" data-bs-target="#modalPesan">
                             <i class="fas fa-shopping-cart me-2"></i>Pesan Sekarang
                         </button>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section id="faq" class="py-5 bg-white">
+        <div class="container px-4">
+            <h3 class="fw-bold mb-4 text-center">Pertanyaan yang Sering Diajukan (FAQ)</h3>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion shadow-sm" id="accordionFAQ">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Apakah aplikasinya berat dan sulit digunakan?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Sama sekali tidak. Aplikasi ini dirancang agar ringan, intuitif, dan mudah dipahami. Anda bisa menjalankannya di PC/laptop, tablet, maupun <i>smartphone</i> (HP). Aplikasi ini berbasis web sehingga dapat diakses kapan saja dan di mana saja selama ada koneksi internet.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Apakah ada biaya langganan bulanan atau tahunan?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Tidak ada. Ini adalah investasi sekali bayar untuk penggunaan seumur hidup (<i>lifetime</i>). Anda terbebas dari biaya perpanjangan tahunan dan biaya sewa ruang penyimpanan (<i>cloud</i>).
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Kenapa di marketplace ada yang menjual lebih murah?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Di <i>marketplace</i> mungkin ada yang menawarkan harga lebih murah, tetapi biasanya itu hanya berupa <i>source code</i> mentah. Anda harus melakukan <i>setting</i> sendiri, menyewa domain/hosting, menyediakan ruang penyimpanan sendiri, hingga menginstal <i>software</i> pendukung seperti XAMPP. Sedangkan aplikasi kami adalah solusi <strong>terima beres dan siap pakai</strong>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Apakah User dan Jenis Surat bisa ditambah sendiri?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Bisa. Manajemen pengguna (User) dan klasifikasi Jenis Surat dapat Anda kelola sepenuhnya—seperti ditambah, diubah, atau dihapus—oleh Kepala Sekolah, Tata Usaha, atau Operator Sekolah sesuai kebutuhan.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Apakah aplikasi ini menggantikan aplikasi SRIKANDI pemerintah?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Tidak. Aplikasi ini justru hadir sebagai jembatan dan sistem <i>backup</i> mandiri untuk sekolah Anda. Sistem ini merapikan semua arsip surat dari SRIKANDI, surat yang masuk secara manual (kertas fisik), maupun surat koordinasi yang masuk melalui WhatsApp dalam satu tempat yang tertata.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Berapa lama aplikasi selesai dikerjakan setelah pemesanan?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Proses penyiapan aplikasi (termasuk pemasangan logo dan nama sekolah Anda) memakan waktu 2 x 24 jam setelah pesanan kami terima, menyesuaikan dengan nomor urut antrean.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Jika kesulitan, apakah boleh meminta bantuan atau pendampingan?
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Boleh banget! Kami tidak akan lepas tangan setelah aplikasi diserahkan. Jika Anda atau tim Tata Usaha mengalami kendala, bantuan dan pendampingan penggunaan aplikasi akan kami jadwalkan dan berikan secara gratis.
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -195,7 +299,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-bold text-muted small"><i class="fas fa-map-marker-alt me-1"></i> Alamat Sekolah</label>
-                            <textarea class="form-control bg-light" id="alamatSekolah" rows="2" required></textarea>
+                            <textarea class="form-control bg-light" id="alamatSekolah" rows="2" placeholder="Alamat lengkap/resmi" required></textarea>
                         </div>
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
@@ -241,7 +345,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        // Logika JavaScript tetap sama seperti versi sebelumnya
         let base64LogoData = '';
         let logoMimeType = '';
         let logoFilename = '';
@@ -342,10 +445,11 @@
                 const result = await response.json();
                 
                 if(result.status === 'success'){
+                    // Notifikasi Sukses Diperbarui Sesuai Permintaan
                     Swal.fire({
                         icon: 'success',
                         title: 'Pemesanan Berhasil!',
-                        html: `Terima kasih! Pesanan Anda telah diterima.<br><br><b>ID Anda: ${result.orderId}</b>`,
+                        html: `Terima kasih! Pesanan Anda telah diterima. Aplikasi akan kami kerjakan dalam 2 x 24 jam, sesuai antrian. Kami akan menghubungi Anda melalui WA setelah aplikasi siap digunakan.<br><br><b>ID Anda: ${result.orderId}</b>`,
                         confirmButtonText: 'Tutup',
                         confirmButtonColor: '#198754'
                     });
@@ -381,5 +485,3 @@
     </script>
 </body>
 </html>
-
-
